@@ -7,10 +7,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HomepageComponent } from './views/homepage/homepage.component';
+import { SignupComponent } from './auth/signup/signup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

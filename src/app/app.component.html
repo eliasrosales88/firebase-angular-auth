@@ -1,5 +1,8 @@
 <mat-toolbar color= "primary">
-  <span>Firebase Auth</span>
+  <span class="pointer" [routerLink]="[ '/']">Firebase Auth</span>
+  <span class="example-spacer"></span>
+  <!-- <mat-icon class="example-icon">verified_user</mat-icon> -->
+  <button mat-button [routerLink]="[ '/register']">Register</button>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
