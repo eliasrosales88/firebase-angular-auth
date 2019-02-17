@@ -28,5 +28,11 @@ export class HomepageComponent implements OnInit {
 
   onSubmit(){
     console.log(this.signupForm);
+    const name = this.signupForm.value.name;
+    const email = this.signupForm.value.email;
+    const password = this.signupForm.value.password;
+
+    console.log(name, email, password);
+    this.signupForm.reset();
   }
 }
