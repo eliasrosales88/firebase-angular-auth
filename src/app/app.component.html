@@ -2,8 +2,14 @@
   <span class="pointer" [routerLink]="[ '/']">Firebase Auth</span>
   <span class="example-spacer"></span>
   <!-- <mat-icon class="example-icon">verified_user</mat-icon> -->
-  <button mat-button [routerLink]="[ '/signin']">Sign in</button>
-  <button mat-button [routerLink]="[ '/register']">Register</button>
+  <ng-template [ngIf]="authService.isAuthenticated()">
+    <button mat-button [routerLink]="[ '/dashboard']">Dashboard</button>
+    <button mat-button [routerLink]="[ '/logout']" (click)="onLogout()">Log out</button>
+  </ng-template>
+  <span *ngIf="!authService.isAuthenticated()">
+    <button mat-button [routerLink]="[ '/signin']">Sign in</button>
+    <button mat-button [routerLink]="[ '/register']">Register</button>
+  </span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
