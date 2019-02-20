@@ -13,6 +13,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthCredentials } from './auth/auth.credentials';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [AuthService, AuthCredentials],
+  providers: [AuthService, AuthCredentials, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
